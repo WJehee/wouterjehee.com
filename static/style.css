@@ -1,4 +1,17 @@
+@import "nord.css";
 
+:root {
+    --bg: var(--nord0);
+    --text: var(--nord6);
+    --subtle-text: var(--nord4);
+    --primary1: var(--nord7);
+    --primary2: var(--nord8);
+    --secondary: var(--nord9);
+    --tertiary: var(--nord10);
+}
 
-
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
 
