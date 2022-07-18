@@ -2,21 +2,25 @@
 
 {{ partial "nav" . }}
 
-<h1>{{ .Title }}</h1>
+<div class="container">
+    <h1>{{ .Title }}</h1>
 
-<section class="content">
-    {{ .Content }}
-</section>
+    <section class="content">
+        {{ .Content }}
+    </section>
 
-<section class="posts">
-{{ range .Pages }}
-    <div class="post">
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a> - {{ .Date.Format "Jan 2 2006" }}</h2>
-        {{ with .Params.tags }}
-                tags: {{ delimit . ", " }}
-        {{ end }}
-    </div>
-{{ end }}
-</section>
-
+    <ul class="posts">
+    {{ range .Pages }}
+        <li class="post">
+            <a href="{{ .RelPermalink }}">
+                <span class="post-title">{{ .Title }}</span>
+                <span class="post-date">{{ .Date.Format "Jan 2 2006" }}</span>
+            </a>
+            {{ with .Params.tags }}
+                    tags: {{ delimit . ", " }}
+            {{ end }}
+        </li>
+    {{ end }}
+    </ul>
+</div>
 {{ end }}
