@@ -13,3 +13,19 @@ body {
     color: var(--text);
 }
 
+a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary1);
+}
+
+a:visited {
+    color: var(--primary2);
+}
+
+header {
+    text-align: center;
+}
