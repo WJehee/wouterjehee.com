@@ -1,9 +1,13 @@
 {{ define "main" }}
+<header>
 
 <h1>{{ .Title }}</h1>
+<h2>Software Developer | Cybersecurity Student</h2>
 
-<p>
-    {{ .Content }}
-</p>
+<div class="icons">
+    {{ partial "email" . }}
+    {{ partial "github" . }}
+</div>
 
+</header>
 {{ end }}
