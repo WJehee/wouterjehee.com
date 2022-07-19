@@ -1,15 +1,13 @@
 {{ define "main" }}
-<div class="center">
+<div class="home">
+    <h2>{{ .Title }}</h2>
 
-<h2>{{ .Title }}</h2>
-<h3>Software Developer | Cybersecurity Student</h3>
+    <div class="icons">
+        {{ partial "email" . }}
+        {{ partial "github" . }}
+    </div>
 
-<div class="icons">
-    {{ partial "email" . }}
-    {{ partial "github" . }}
-</div>
-
-<h3><a href="blog/">Blog</a></h3>
-
+    <a href="blog/">Blog</a>
+    <a href="resources">Resources</a>
 </div>
 {{ end }}
