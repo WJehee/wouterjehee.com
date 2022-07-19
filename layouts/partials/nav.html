@@ -1,2 +1,12 @@
 <nav>
+    <div class="nav">
+        <div>
+            <a href="/">Home</a>
+            {{ partial "nav-elements" . }}
+        </div>
+        <div>
+            {{ partial "github" . }}
+            {{ partial "email" . }}
+        </div>
+    </div>
 </nav>

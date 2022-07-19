@@ -1,5 +1,6 @@
 :root {
     --bg: var(--nord0);
+    --bg-alt: var(--nord1);
     --text: var(--nord6);
     --subtle-text: var(--nord4);
     --primary1: var(--nord7);
@@ -59,6 +60,27 @@ a:visited {
     color: var(--primary2);
 }
 
+main {
+    margin-top: 10rem;
+}
+
+nav {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--bg-alt);
+    padding: 1rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    font-size: 2rem;
+}
+
 .home {
     min-height: 100vh;
     display: flex;
@@ -77,7 +99,6 @@ a:visited {
 }
 
 .posts {
-    flex-grow: 1;
     list-style: none;
     margin: 0;
     padding: 0;

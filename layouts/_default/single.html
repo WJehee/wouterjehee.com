@@ -3,8 +3,10 @@
 {{ partial "nav" . }}
 
 <article class="container">
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
+    <main>
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+    </main>
 </article>
 
 {{ end }}

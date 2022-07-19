@@ -1,3 +1,7 @@
 baseURL = 'wouterjehee.com'
 languageCode = 'en-us'
 title = 'Wouter Jehee'
+
+[params]
+icon_size = 42
+
