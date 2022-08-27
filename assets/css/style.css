@@ -1,12 +1,18 @@
 :root {
-    --bg: var(--nord0);
-    --bg-alt: var(--nord1);
+    --bg: var(--nord1);
+    --bg-alt: var(--nord0);
     --text: var(--nord6);
-    --subtle-text: var(--nord4);
-    --primary1: var(--nord7);
-    --primary2: var(--nord8);
-    --secondary: var(--nord9);
-    --tertiary: var(--nord10);
+    --text-alt: var(--nord4);
+    --text-subtle: var(--nord3);
+    --link: var(--nord9);
+    --info: var(--nord10);
+    --error: var(--nord11);
+    --danger: var(--nord12);
+    --warning: var(--nord13);
+    --success: var(--nord14);
+    --primary: var(--nord8);
+    --secondary: var(--nord7);
+    --tertiary: var(--nord15);
 }
 
 html {
@@ -53,11 +59,7 @@ a {
 }
 
 a:hover {
-    color: var(--primary1);
-}
-
-a:visited {
-    color: var(--primary2);
+    color: var(--info);
 }
 
 main {
@@ -100,6 +102,10 @@ nav {
     font-size: 2.5rem;
 }
 
+.subtitle {
+    margin-bottom: 4rem;
+}
+
 .container {
     overflow: hidden;
     width: 100%;
@@ -114,10 +120,7 @@ nav {
 }
 
 .post {
-    border-bottom: 1px grey dashed;
-}
-
-.post a {
+    border-bottom: 1px var(--text-subtle) dashed;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -125,7 +128,7 @@ nav {
 
 .post-date {
     flex-shrink: 0;
-    color: grey;
+    color: var(--tertiary);
 }
 
 @media screen and (max-width: 550px) {
