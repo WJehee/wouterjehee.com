@@ -16,8 +16,7 @@
                 <a class="post-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
                 <span class="post-tags">
                     {{ range $i, $tag := .GetTerms "tags" }}
-                    {{ if $i }}|{{ end }}
-                        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                        {{ if $i }}<span class="comma">,</span>{{ end }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
                     {{ end }}
                 </span>
                 <span class="post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
