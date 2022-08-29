@@ -22,7 +22,7 @@
                     {{ end }}
                 </span><br>
                 {{ end }}
-                <img class="project-thumbnail" src="{{ with .Resources.GetMatch "thumbnail.jpg" }}{{ .RelPermalink }}{{ end }}" alt="{{ .Params.alt }}">
+                <img class="project-thumbnail" src="{{ with .Resources.GetMatch "thumbnail.jpg" }}{{ .RelPermalink }}{{ end }}" alt="{{ .Title }}">
             </li>
         {{ end }}
         </ul>

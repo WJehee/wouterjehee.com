@@ -1,10 +1,10 @@
 <nav>
     <div class="nav">
-        <div class="nav-folders">
+        <div class="nav-folders" role="list" aria-label="Primary">
             <a href="/">Home</a>
             {{ partial "nav-elements" . }}
         </div>
-        <div class="nav-icons">
+        <div class="nav-icons" role="list" aria-label="Social links">
             {{ partial "github" . }}
             {{ partial "email" . }}
         </div>
