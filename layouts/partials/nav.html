@@ -1,8 +1,10 @@
 <nav>
     <div class="nav">
         <div class="nav-folders" role="list" aria-label="Primary">
-            <a href="/">Home</a>
-            {{ partial "nav-elements" . }}
+            <a href="/" class="nav-elem">Home</a>
+            <span class="nav-elements">
+                {{ partial "nav-elements" . }}
+            </span>
         </div>
         <div class="nav-icons" role="list" aria-label="Social links">
             {{ partial "github" . }}
