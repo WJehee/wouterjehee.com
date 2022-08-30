@@ -13,24 +13,33 @@
     --primary: var(--nord8);
     --secondary: var(--nord7);
     --tertiary: var(--nord15);
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1rem;
 }
 
-html {
-  font-size: 62.5%;
-}
+/* General Styles */
 
 body {
     background-color: var(--bg);
     color: var(--text);
-    font-size: 1.5em;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
     line-height: 1.6;
-    font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* Typography */
+
+h1, h2, h3 {
+    line-height: 1.1;
     margin: 0;
-    padding: 0;
 }
+
+h1 {font-size: var(--fs-h1);}
+h2 {font-size: var(--fs-h2);}
+h3 {font-size: var(--fs-h3);}
 
 p {
   margin-top: 0;
@@ -44,6 +53,13 @@ a {
 a:hover {
     color: var(--info);
 }
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Main Styles */
 
 main {
     margin-top: 10rem;
@@ -63,7 +79,10 @@ nav {
     justify-content: space-between;
     max-width: 1200px;
     margin: auto;
-    font-size: 2rem;
+}
+
+.nav-elem {
+    font-size: var(--fs-h3);
 }
 
 .nav-folders {
@@ -82,7 +101,6 @@ nav {
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 2.5rem;
 }
 
 .subtitle {
@@ -128,18 +146,11 @@ nav {
     background-color: var(--bg-alt);
 }
 
-.project-thumbnail {
-    max-width: 500px;
-}
+/* Media Queries */
 
 @media screen and (max-width: 550px) {
-    .nav-elem {
-        visibility: hidden;
+    .nav-elements {
+        display: none;
     }
-}
-
-.comma {
-    margin: 0;
-    padding: 0;
 }
 
