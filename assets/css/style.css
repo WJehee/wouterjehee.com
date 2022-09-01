@@ -146,6 +146,10 @@ nav {
     background-color: var(--bg-alt);
 }
 
+.project-thumbnail {
+    opacity: 0.5;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 550px) {
