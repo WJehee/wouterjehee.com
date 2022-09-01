@@ -17,7 +17,7 @@
                 {{ with .GetTerms "tags" }}
                 <span class="project-tags">
                     {{ range $i, $tag := . }}
-                    {{ if $i }}|{{ end }}
+                    {{ if $i }} | {{ end }}
                         <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
                     {{ end }}
                 </span><br>
