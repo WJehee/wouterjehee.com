@@ -150,6 +150,16 @@ nav {
     opacity: 0.5;
 }
 
+.project-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.not-available {
+    color: var(--text-subtle);
+    text-decoration: line-through;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 550px) {

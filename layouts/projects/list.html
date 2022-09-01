@@ -23,6 +23,10 @@
                 </span><br>
                 {{ end }}
                 <img class="project-thumbnail" src="{{ with .Resources.GetMatch "thumbnail.jpg" }}{{ .RelPermalink }}{{ end }}" alt="{{ .Title }}">
+                <div class="project-links">
+                    {{ partial "live_link" . }}
+                    {{ partial "code_link" . }}
+                </div>
             </li>
         {{ end }}
         </ul>
