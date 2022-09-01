@@ -4,7 +4,7 @@
 
 <div class="container">
     <main>
-        <h1>{{ .Title }}</h1>
+        <h1 class="projects-header">{{ .Title }}</h1>
 
         <section class="content">
             {{ .Content }}
@@ -13,7 +13,7 @@
         <ul class="projects">
         {{ range .Pages }}
             <li class="project">
-                <h3><a class="project-title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                <h3 class="project-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
                 {{ with .GetTerms "tags" }}
                 <span class="project-tags">
                     {{ range $i, $tag := . }}
@@ -22,7 +22,7 @@
                     {{ end }}
                 </span><br>
                 {{ end }}
-                <img class="project-thumbnail" src="{{ with .Resources.GetMatch "thumbnail.jpg" }}{{ .RelPermalink }}{{ end }}" alt="{{ .Title }}">
+                <img class="project-thumbnail" src="{{ with .Resources.GetMatch "thumbnail.jpg" }}{{ .RelPermalink }}{{ end }}" alt="">
                 <div class="project-links">
                     {{ partial "live_link" . }}
                     {{ partial "code_link" . }}

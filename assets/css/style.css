@@ -132,6 +132,11 @@ nav {
     color: var(--tertiary);
 }
 
+.projects-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .projects {
     list-style: none;
     margin: 0;
@@ -144,13 +149,36 @@ nav {
 .project {
     text-align: center;
     background-color: var(--bg-alt);
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.project-title, .project-tags, .project-thumbnail, .project-links {
+    grid-column: 1 / 2;
+}
+
+.project-title, .project-tags, .project-links {
+    z-index: 1;
+}
+
+.project-title {
+    margin-top: 10px;
+    grid-row: 1 / 2;
+}
+
+.project-tags {
+    grid-row: 2 / 3;
 }
 
 .project-thumbnail {
-    opacity: 0.5;
+    opacity: 0.4;
+    grid-row: 1 / 5;
+    width: 100%;
+    height: 100%;
 }
 
 .project-links {
+    grid-row: 3 / 4;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
