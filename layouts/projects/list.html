@@ -13,6 +13,7 @@
         <ul class="projects">
         {{ range .Pages }}
             <li class="project">
+                <img class="project-thumbnail" src="{{ with .Resources.GetMatch "thumbnail.jpg" }}{{ .RelPermalink }}{{ end }}" alt="">
                 <h3 class="project-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
                 {{ with .GetTerms "tags" }}
                 <span class="project-tags">
@@ -22,7 +23,6 @@
                     {{ end }}
                 </span><br>
                 {{ end }}
-                <img class="project-thumbnail" src="{{ with .Resources.GetMatch "thumbnail.jpg" }}{{ .RelPermalink }}{{ end }}" alt="">
                 <div class="project-links">
                     {{ partial "live_link" . }}
                     {{ partial "code_link" . }}
