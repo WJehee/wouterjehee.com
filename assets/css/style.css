@@ -60,13 +60,13 @@ img {
     max-width: 100%;
 }
 
-/* Main Styles */
-
 article a {
     color: var(--link);
 }
 
-nav {
+/* Main Styles */
+
+.nav-wrapper {
     position: fixed;
     z-index: 1;
     bottom: 0;

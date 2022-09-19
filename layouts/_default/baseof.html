@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    {{ partial "head" . }}
+    <head>
+        <title>
+            {{ block "title" . }}
+                {{ .Site.Title }}
+            {{ end }}
+        </title>
+        {{ with .Params.tags }}
+        <meta name="tags" content="{{ range . }}{{ . }} {{ end }}">
+        {{ end }}
+        <meta name="author" content="Wouter Jehee">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {{ $styles := resources.Match "css/*.css" }}
+        {{ range $styles }}
+            {{ $style := . | minify | fingerprint }}
+            <link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}">
+        {{ end }}
+    </head>
     <body>
         {{ block "main" . }} {{ end }}
     </body>
