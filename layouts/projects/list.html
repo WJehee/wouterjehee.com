@@ -9,16 +9,20 @@
 <main class="container">
     <h1 class="projects-header">{{ .Title }}</h1>
 
+    <article class="content">
+        {{ .Content }}
+    </article>
+
     <ul class="projects">
     {{ range .Pages }}
         <li class="project">
             <img class="project-thumbnail" src="{{ with .Resources.GetMatch "thumbnail.jpg" }}{{ .RelPermalink }}{{ end }}" alt="">
-            <h3 class="project-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <h3 class="project-title"><a href="{{ .RelPermalink }}">{{ .Title | humanize }}</a></h3>
             {{ with .GetTerms "tags" }}
             <span class="project-tags">
                 {{ range $i, $tag := . }}
                 {{ if $i }} | {{ end }}
-                    <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                    <a href="{{ .RelPermalink }}">{{ .LinkTitle | humanize }}</a>
                 {{ end }}
             </span><br>
             {{ end }}
