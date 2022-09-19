@@ -28,6 +28,7 @@ body {
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
+    padding-bottom: 100px;
 }
 
 /* Typography */
@@ -61,8 +62,8 @@ img {
 
 /* Main Styles */
 
-main {
-    margin-top: 10rem;
+article a {
+    color: var(--link);
 }
 
 nav {
@@ -140,7 +141,7 @@ nav {
 .projects {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
