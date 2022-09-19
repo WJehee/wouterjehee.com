@@ -1,13 +1,13 @@
+{{ define "title" }}
+    {{ .Site.Title }} | {{ .Title | humanize }}
+{{ end }}
+
 {{ define "main" }}
 
 {{ partial "nav" . }}
 
-<div class="container">
+<main class="container">
     <h1 class="projects-header">{{ .Title }}</h1>
-
-    <section class="content">
-        {{ .Content }}
-    </section>
 
     <ul class="projects">
     {{ range .Pages }}
@@ -29,6 +29,6 @@
         </li>
     {{ end }}
     </ul>
-</div>
+</main>
 {{ end }}
 
