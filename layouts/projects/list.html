@@ -3,34 +3,32 @@
 {{ partial "nav" . }}
 
 <div class="container">
-    <main>
-        <h1 class="projects-header">{{ .Title }}</h1>
+    <h1 class="projects-header">{{ .Title }}</h1>
 
-        <section class="content">
-            {{ .Content }}
-        </section>
+    <section class="content">
+        {{ .Content }}
+    </section>
 
-        <ul class="projects">
-        {{ range .Pages }}
-            <li class="project">
-                <img class="project-thumbnail" src="{{ with .Resources.GetMatch "thumbnail.jpg" }}{{ .RelPermalink }}{{ end }}" alt="">
-                <h3 class="project-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-                {{ with .GetTerms "tags" }}
-                <span class="project-tags">
-                    {{ range $i, $tag := . }}
-                    {{ if $i }} | {{ end }}
-                        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-                    {{ end }}
-                </span><br>
+    <ul class="projects">
+    {{ range .Pages }}
+        <li class="project">
+            <img class="project-thumbnail" src="{{ with .Resources.GetMatch "thumbnail.jpg" }}{{ .RelPermalink }}{{ end }}" alt="">
+            <h3 class="project-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            {{ with .GetTerms "tags" }}
+            <span class="project-tags">
+                {{ range $i, $tag := . }}
+                {{ if $i }} | {{ end }}
+                    <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
                 {{ end }}
-                <div class="project-links">
-                    {{ partial "live_link" . }}
-                    {{ partial "code_link" . }}
-                </div>
-            </li>
-        {{ end }}
-        </ul>
-    </main>
+            </span><br>
+            {{ end }}
+            <div class="project-links">
+                {{ partial "live_link" . }}
+                {{ partial "code_link" . }}
+            </div>
+        </li>
+    {{ end }}
+    </ul>
 </div>
 {{ end }}
 
