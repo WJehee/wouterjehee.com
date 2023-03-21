@@ -1,14 +1,12 @@
-<nav class="nav-wrapper">
-    <div class="nav">
-        <div class="nav-folders" role="list" aria-label="Primary">
-            <a href="/" class="nav-elem">Home</a>
-            <span class="nav-elements">
-                {{ partial "nav-elements" . }}
-            </span>
-        </div>
-        <div class="nav-icons" role="list" aria-label="Social links">
-            {{ partial "github" . }}
-            {{ partial "email" . }}
-        </div>
-    </div>
+<nav class="container-fluid">
+    <ul>
+        <li><a href="/"><strong>{{ .Site.Title }}</strong></a></li>
+        <li>{{ partial "github" . }}</li>
+        <li>{{ partial "email" . }}</li>
+    </ul>
+    <ul>
+        <li><a href="/">Home</a></li>
+        {{ partial "nav-elements" . }}
+    </ul>
 </nav>
+

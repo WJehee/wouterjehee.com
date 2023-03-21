@@ -7,15 +7,10 @@ I have always been interested in optimizing my setup and workflow, be it my EDC 
 Looking at what other people are using has been instrumental in improving my own configuration, so I decided to dedicate this page to
 sharing my own setup, in case anyone is interested.
 
-## PC
+PC and [laptop](https://frame.work/) both running Arch linux ([dotfiles](https://github.com/WJehee/.dotfiles))  
+I use a Google pixel 4a running [Calyx OS](https://calyxos.org/).
 
-PC and laptop both running Arch linux ([dotfiles](https://github.com/WJehee/.dotfiles))
-
-- [Ergodox EZ Keyboard](https://ergodox-ez.com/)
-
-## Phone
-
-I use a Google pixel 4a running [Calyx OS](https://calyxos.org/) as my daily driver.
+### Applications I use
 
 - [K-9 Mail](https://k9mail.app/) and [Tutanota](https://tutanota.com/) for email
 - [Simplelogin](https://simplelogin.io/) for email aliasing
