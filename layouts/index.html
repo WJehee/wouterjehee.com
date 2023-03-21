@@ -1,13 +1,21 @@
 {{ define "main" }}
-<div class="home">
-    <h1 class="title">{{ .Title }}</h1>
-    <h3 class="subtitle">Software Engineer | Cybersecurity Student</h3>
-
-    <div class="icons">
-        {{ partial "email" . }}
-        {{ partial "github" . }}
+<main class="container" id="index">
+    <hgroup>
+        <h1>{{ .Title }}</h1>
+        <h3>Software Engineer | Cybersecurity Student</h3>
+    </hgroup>
+   
+    <hr>
+    <div class="grid">
+        <ul class="list" style="text-align: center;">
+            <li>
+                {{ partial "email" . }}
+                {{ partial "github" . }}
+            </li> 
+            {{ partial "nav-elements" . }}
+        </ul>
     </div>
+</main>
 
-    {{ partial "nav-elements" . }}
-</div>
 {{ end }}
+

@@ -9,16 +9,17 @@
 <main class="container">
     <h1>{{ .Title }}</h1>
 
-    <article class="content">
-        {{ .Content }}
-    </article>
-    <br>
+    {{ with .Content }}
+        <article>
+            {{ .}}
+        </article>
+    {{ end }}
 
-    <ul class="posts">
+    <ul>
     {{ range .Pages }}
         <li class="post">
-            <a class="post-title" href="{{ .RelPermalink }}">{{ .Title | humanize }}</a>
-            <span class="post-tags">
+            <a href="{{ .RelPermalink }}">{{ .Title | humanize }}</a>
+            <span class="post-tag">
                 {{ range $i, $tag := .GetTerms "tags" }}
                 {{ if $i }}|{{ end }}
                     <a href="{{ .RelPermalink }}">{{ .LinkTitle | humanize }}</a>
@@ -29,4 +30,8 @@
     {{ end }}
     </ul>
 </main>
+
+{{ partial "footer" . }}
+
 {{ end }}
+

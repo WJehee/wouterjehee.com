@@ -7,16 +7,18 @@
 {{ partial "nav" . }}
 
 <main class="container">
-    <h1 class="projects-header">{{ .Title }}</h1>
+    <h1>{{ .Title }}</h1>
 
-    <article class="content">
-        {{ .Content }}
-    </article>
+    {{ with .Content }}
+        <article>
+            {{ . }}
+        </article>
+    {{ end }}
 
     <ul class="projects">
     {{ range .Pages }}
         <li class="project">
-            <img class="project-thumbnail" src="{{ with .Resources.GetMatch "thumbnail.jpg" }}{{ .RelPermalink }}{{ end }}" alt="">
+            <img class="project-thumbnail" src="{{ with .Resources.GetMatch "thumbnail.jpg" }}{{ .RelPermalink }}{{ end }}" alt="{{ .Title | humanize }} thumbnail">
             <h3 class="project-title"><a href="{{ .RelPermalink }}">{{ .Title | humanize }}</a></h3>
             {{ with .GetTerms "tags" }}
             <span class="project-tags">
@@ -34,5 +36,8 @@
     {{ end }}
     </ul>
 </main>
+
+{{ partial "footer" . }}
+
 {{ end }}
 
