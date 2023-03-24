@@ -1,32 +1,15 @@
-:root {
-    --bg: var(--nord1);
-    --bg-alt: var(--nord0);
-    --text: var(--nord6);
-    --text-alt: var(--nord4);
-    --text-subtle: var(--nord3);
-    --link: var(--nord9);
-    --info: var(--nord10);
-    --error: var(--nord11);
-    --danger: var(--nord12);
-    --warning: var(--nord13);
-    --success: var(--nord14);
-    --primary: var(--nord8);
-    --secondary: var(--nord7);
-    --tertiary: var(--nord15);
-}
-
 a {
-    color: var(--text);
-    text-decoration: none;
+    color: var(--h1-color) !important;
 }
 
 a:hover {
-    color: var(--info);
+    color: var(--primary) !important;
 }
 
 article a {
-    color: var(--link);
+    color: var(--primary) !important;
 }
+
 
 .list li {
     list-style: none;
@@ -42,15 +25,15 @@ article a {
 }
 
 .post-tag a {
-    color: var(--secondary);
+    color: var(--nord8) !important;
 }
 
 .post-tag a:hover {
-    color: var(--info);
+    color: var(--primary) !important;
 }
 
 .post-date {
-    color: var(--tertiary);
+    color: var(--nord15);
     flex-shrink: 0;
 }
 
@@ -67,7 +50,6 @@ article a {
 
 .project {
     text-align: center;
-    background-color: var(--bg-alt);
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
 }
