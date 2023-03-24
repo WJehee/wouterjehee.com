@@ -10,10 +10,10 @@ article a {
     color: var(--primary) !important;
 }
 
-
 .list li {
     list-style: none;
 }
+
 
 /* Posts */
 
@@ -82,5 +82,14 @@ article a {
 
 .not-available {
     text-decoration: line-through;
+}
+
+/* Media queries */
+
+/* Hide brand part for mobile */
+@media only screen and (max-width: 631px) {
+    .hidden {
+        display: none;
+    }
 }
 

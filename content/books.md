@@ -19,6 +19,6 @@ This page contains an overview of all the books I've read since keeping track of
 - Getting things done | David Allen
 
 ## 2023
-- The circle | Dave Eggers
-- The obstacle is the way | Ryan Holiday
+- The Circle | Dave Eggers
+- The Obstacle is the Way | Ryan Holiday
 
