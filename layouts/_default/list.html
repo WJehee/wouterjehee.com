@@ -21,11 +21,11 @@
             <a href="{{ .RelPermalink }}">{{ .Title | humanize }}</a>
             <span class="post-tag">
                 {{ range $i, $tag := .GetTerms "tags" }}
-                {{ if $i }}|{{ end }}
+                {{ if $i }}-{{ end }}
                     <a href="{{ .RelPermalink }}">{{ .LinkTitle | humanize }}</a>
                 {{ end }}
             </span>
-            <span class="post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+            <span class="post-date">{{ .Date.Format "Jan 2 - 2006" }}</span>
         </li>
     {{ end }}
     </ul>
