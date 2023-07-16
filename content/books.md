@@ -21,4 +21,7 @@ This page contains an overview of all the books I've read since keeping track of
 ## 2023
 - The Circle | Dave Eggers
 - The Obstacle is the Way | Ryan Holiday
+- 4000 Weeks | Oliver Burkeman
+- Ikigai| Hector Garcia
+- Sapiens | Yuval Noah Harari
 
