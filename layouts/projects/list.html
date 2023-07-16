@@ -1,0 +1,40 @@
+{{ define "title" }}
+    {{ .Site.Title }} | {{ .Title | humanize }}
+{{ end }}
+
+{{ define "main" }}
+
+{{ partial "nav" . }}
+
+<main class="container">
+    <h1>{{ .Title }}</h1>
+
+    {{ with .Content }}
+        <article>
+            {{ .}}
+        </article>
+    {{ end }}
+
+    <ul>
+    {{ range .Pages }}
+        <li class="post">
+            <a href="{{ .RelPermalink }}">{{ .Title | humanize }}</a>
+            <span class="post-tag">
+                {{ range $i, $tag := .GetTerms "tags" }}
+                {{ if $i }}-{{ end }}
+                    <a href="{{ .RelPermalink }}">{{ .LinkTitle | humanize }}</a>
+                {{ end }}
+            </span>
+            <div>
+                {{ partial "live_link" . }}
+                {{ partial "code_link" . }}
+            </div>
+        </li>
+    {{ end }}
+    </ul>
+</main>
+
+{{ partial "footer" . }}
+
+{{ end }}
+
