@@ -1,16 +1,20 @@
 ---
-title: "Resources"
+title: "Uses"
 date: 2022-07-19T15:00:09+02:00
 ---
 
-I have always been interested in optimizing my setup and workflow, be it my EDC (Every Day Carry), desk setup or ricing my linux environment.
-Looking at what other people are using has been instrumental in improving my own configuration, so I decided to dedicate this page to
-sharing my own setup, in case anyone is interested.
-
 PC and [laptop](https://frame.work/) both running Arch linux ([dotfiles](https://github.com/WJehee/.dotfiles))  
-I use a Google pixel 4a running [Calyx OS](https://calyxos.org/).
 
-### Applications I use
+- Editor: [Neovim](https://neovim.io/)
+- Window manager: [BSPWM](https://github.com/bspwm/bspwm)
+- Status bar: [Polybar](https://github.com/polybar/polybar)
+- Launcher: [Rofi](https://github.com/davatorium/rofi)
+- Shell: [zsh](https://www.zsh.org/)
+- Terminal emulator: [Alacritty](https://github.com/alacritty/alacritty)
+
+### Phone
+
+Google pixel 4a running [Calyx OS](https://calyxos.org/).
 
 - [K-9 Mail](https://k9mail.app/) and [Tutanota](https://tutanota.com/) for email
 - [Simplelogin](https://simplelogin.io/) for email aliasing
@@ -20,4 +24,5 @@ I use a Google pixel 4a running [Calyx OS](https://calyxos.org/).
 - [KeepassXC](https://keepassxc.org/) for password management
 - [Aegis](https://getaegis.app/) for 2 Factor Authentication
 - [Syncthing](https://syncthing.net/) for file synchronization between devices
+- [Feeder](https://gitlab.com/spacecowboy/Feeder) for RSS feeds
 
