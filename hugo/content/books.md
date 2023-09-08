@@ -24,4 +24,7 @@ This page contains an overview of all the books I've read since keeping track of
 - 4000 Weeks | Oliver Burkeman
 - Ikigai| Hector Garcia
 - Sapiens | Yuval Noah Harari
+- Essentialism | Greg McKeown
+- War of the Worlds | H G Wells
+- The Handmaid's Tale | Margaret Atwood
 
