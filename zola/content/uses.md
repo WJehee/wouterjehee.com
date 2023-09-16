@@ -1,7 +1,7 @@
----
-title: "Uses"
-date: 2022-07-19T15:00:09+02:00
----
++++
+title = "Uses"
+date = 2022-07-19T15:00:09+02:00
++++
 
 PC and [laptop](https://frame.work/) both running Arch linux ([dotfiles](https://github.com/WJehee/.dotfiles))  
 
