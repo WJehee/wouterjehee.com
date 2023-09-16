@@ -1,0 +1,13 @@
+<nav class="container-fluid">
+    <ul>
+        <li class="hidden"><a href="/"><strong>{{ .Site.Title }}</strong></a></li>
+        <li class="hidden">{{ partial "github" . }}</li>
+        <li class="hidden">{{ partial "email" . }}</li>
+        <li class="hidden">{{ partial "keyoxide" . }}</li>
+    </ul>
+    <ul>
+        <li><a href="/">Home</a></li>
+        {{ partial "nav-elements" . }}
+    </ul>
+</nav>
+

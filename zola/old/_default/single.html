@@ -1,0 +1,26 @@
+{{ define "title" }}
+    {{ .Site.Title }} | {{ .Title | humanize }}
+{{ end }}
+
+{{ define "main" }}
+
+{{ partial "nav" . }}
+
+<main class="container">
+    {{ if isset .Params "subtitle" }}
+    <hgroup>
+        <h1>{{ .Title | humanize }}</h1>
+        <h2>{{ .Params.subtitle | humanize }}</h2>
+    </hgroup>
+    {{ else }}
+        <h1>{{ .Title | humanize }}</h1>
+    {{ end }}
+    <article>
+        {{ .Content }}
+    </article>
+</main>
+
+{{ partial "footer" . }}
+
+{{ end }}
+
