@@ -1,0 +1,13 @@
+<nav class="container-fluid">
+    <ul>
+        <li class="hidden"><a href="/"><strong>{{ config.title }}</strong></a></li>
+        <li class="hidden">{% include "partials/github.html" %}</li>
+        <li class="hidden">{% include "partials/email.html" %}</li>
+        <li class="hidden">{% include "partials/keyoxide.html" %}</li>
+    </ul>
+    <ul>
+        <li><a href="/">Home</a></li>
+        {% include "partials/nav-elements.html" %}
+    </ul>
+</nav>
+

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+{% include "partials/nav.html" %}
+
+<main class="container">
+    <h1>{{ section.title }}</h1>
+
+    <ul>
+    {% for post in section.pages %}
+        <li class="post">
+            <a href="{{ post.permalink }}">{{ post.title }}</a>
+            <span class="post-tag">
+            </span>
+            <span class="post-date">{{ post.date }}</span>
+        </li>
+    {% endfor %}
+    </ul>
+</main>
+
+
+
+{% endblock main %}
