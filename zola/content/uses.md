@@ -1,6 +1,6 @@
 +++
 title = "Uses"
-date = 2022-07-19T15:00:09+02:00
+date = 2022-07-19
 +++
 
 PC and [laptop](https://frame.work/) both running [NixOS](https://nixos.org/) ([dotfiles](https://github.com/WJehee/.dotfiles-nix)).  

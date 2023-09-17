@@ -1,6 +1,6 @@
 +++
 title = "Books"
-date = 2023-03-21T21:15:52+01:00
+date = 2023-03-21
 +++
 
 This page contains an overview of all the books I've read since keeping track of it.
