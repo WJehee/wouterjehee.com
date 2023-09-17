@@ -3,11 +3,12 @@ title = "Uses"
 date = 2022-07-19T15:00:09+02:00
 +++
 
-PC and [laptop](https://frame.work/) both running Arch linux ([dotfiles](https://github.com/WJehee/.dotfiles))  
+PC and [laptop](https://frame.work/) both running [NixOS](https://nixos.org/) ([dotfiles](https://github.com/WJehee/.dotfiles-nix)).  
+My old dotfiles for Arch linux can be found [here](https://github.com/WJehee/.dotfiles).
 
 - Editor: [Neovim](https://neovim.io/)
-- Window manager: [BSPWM](https://github.com/bspwm/bspwm)
-- Status bar: [Polybar](https://github.com/polybar/polybar)
+- Window manager: [Hyprland](https://hyprland.org/)
+- Status bar: [Waybar](https://github.com/Alexays/Waybar)
 - Launcher: [Rofi](https://github.com/davatorium/rofi)
 - Shell: [zsh](https://www.zsh.org/)
 - Terminal emulator: [Alacritty](https://github.com/alacritty/alacritty)
