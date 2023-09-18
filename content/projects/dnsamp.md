@@ -1,6 +1,6 @@
 +++
 title = "DNS amplification in the Dutch Digital Landscape"
-date = 2023-04-21T11:26:25+02:00
+date = 2023-04-21
 
 [extra]
 code = "https://github.com/gregor160300/IN4253ET-HackingLab"
