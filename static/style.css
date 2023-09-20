@@ -1,3 +1,6 @@
+:root {
+}
+
 a {
     color: var(--h1-color) !important;
 }
@@ -52,9 +55,8 @@ article a {
 
 /* Media queries */
 
-/* Hide brand part for mobile */
 @media only screen and (max-width: 631px) {
-    .hidden {
+    .hidden-mobile {
         display: none;
     }
 }
