@@ -20,15 +20,18 @@
     <article>
         {{ page.content | safe }}
     </article>
-</main>
+    {% if page.taxonomies.series %}
+        {% set serie = get_taxonomy_term(kind="series", term="Niks to Nix") %}
+        <h4>Other articles in this series:</h4>
+        {{ page.taxonomies.series[0] }}
+        {% for other in serie.pages %}
+            {% if page.title != other.title %}
+            <a href="other.permalink">{{ other.title }}</a>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
 
-{% if page.taxonomies.series %}
-    {{ page.taxonomies.series[0] }}
-    {% set serie = get_taxonomy_term(kind="series", term="Niks to Nix") %}
-    {% for page in serie.pages %}
-        {{ page.title }}
-    {% endfor %}
-{% endif %}
+</main>
 
 {% include "partials/footer.html" %}
 
