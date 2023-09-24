@@ -1,5 +1,5 @@
 +++
-title = "Niks to Nix, part 1 | introduction and VM"
+title = "Niks to Nix, part 1 | Introduction and VM setup"
 template = "page.html"
 date = 2023-09-17
 weight = 1
@@ -34,8 +34,4 @@ I used to run Dovecot + Postfix for email but I recently came across stalwart la
 - Matrix server
 - Firefox sync
 - Rainloop
-
-
-
-
 

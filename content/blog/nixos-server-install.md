@@ -1,5 +1,5 @@
 +++
-title = "Niks to Nix, part 2 | configuring my server using Nix"
+title = "Niks to Nix, part 2 | Configuring my server using Nix"
 template = "page.html"
 date = 2023-09-20
 weight = 2

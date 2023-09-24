@@ -12,7 +12,8 @@ taxonomies = [
 ]
 
 [markdown]
-highlight_code = false
+highlight_code = true
 
 [extra]
 icon_size = 42
+
