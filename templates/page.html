@@ -22,6 +22,14 @@
     </article>
 </main>
 
+{% if page.taxonomies.series %}
+    {{ page.taxonomies.series[0] }}
+    {% set serie = get_taxonomy_term(kind="series", term="Niks to Nix") %}
+    {% for page in serie.pages %}
+        {{ page.title }}
+    {% endfor %}
+{% endif %}
+
 {% include "partials/footer.html" %}
 
 {% endblock main %}
