@@ -1,9 +1,15 @@
 base_url = "https://wouterjehee.com"
 title = "Wouter Jehee"
-
 compile_sass = true
 
+generate_feed = true
+feed_filename = "rss.xml"
+
 build_search_index = false
+
+taxonomies = [
+    {name = "series", feed = true, paginate_by = 10},
+]
 
 [markdown]
 highlight_code = false
