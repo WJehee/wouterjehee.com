@@ -2,7 +2,6 @@
 title = "Niks to Nix, part 2 | Configuring my server using Nix"
 template = "page.html"
 date = 2023-09-20
-weight = 2
 [taxonomies]
 series=["Niks to Nix"]
 +++
