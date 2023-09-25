@@ -1,9 +1,20 @@
 +++
-title = "Books"
+title = "Catalogue"
 date = 2023-03-21
 +++
 
-This page contains an overview of all the books I've read since keeping track of it.
+Things I read / listen(ed) to since I started keeping track.
+
+## Podcasts
+
+- BNR | Digitaal
+- BNR | De Technoloog
+- BNR | Nexus
+- NRC | Onbehaarde Apen
+- Alie Ward | Ologies
+- Tanner Campbell | Practical Stoicism
+
+## Books
 
 ### 2022
 - Lord of the flies | William Golding
@@ -22,7 +33,7 @@ This page contains an overview of all the books I've read since keeping track of
 - The Circle | Dave Eggers
 - The Obstacle is the Way | Ryan Holiday
 - 4000 Weeks | Oliver Burkeman
-- Ikigai| Hector Garcia
+- Ikigai | Hector Garcia
 - Sapiens | Yuval Noah Harari
 - Essentialism | Greg McKeown
 - War of the Worlds | H G Wells

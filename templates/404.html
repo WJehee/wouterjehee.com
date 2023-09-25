@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+| Not found 
+{% endblock title %}
+
+{% block main %}
+
+{% include "partials/nav.html" %}
+
+<main class="container">
+    <hgroup>
+        <h1>Page not found</h1>
+        <h2>Go back <a href="/">home</a></h2>
+    </hgroup>
+</main>
+
+{% include "partials/footer.html" %}
+
+{% endblock main %}
