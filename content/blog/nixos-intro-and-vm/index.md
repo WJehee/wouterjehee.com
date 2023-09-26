@@ -34,7 +34,7 @@ This series will cover at least the following topics, but I also have a list of 
 
 ## Virtual machine setup
 
-Since my server is still running and I use the services on a daily basis, my plan is to first test the configuration in a virtual machine and then deploy it once it is done.
+Since my server is still running and I use the services on a daily basis, my plan is to first test the configuration in a virtual machine and then deploy it once it is done, in order to minimize downtime.
 
 I will be using virt-manager for running my VM's and I'll be using the [nixos minimal iso image](https://nixos.org/download).
 
