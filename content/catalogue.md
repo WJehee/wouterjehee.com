@@ -3,8 +3,6 @@ title = "Catalogue"
 date = 2023-03-21
 +++
 
-Things I read / listen(ed) to since I started keeping track.
-
 ## Podcasts
 
 - BNR | Digitaal

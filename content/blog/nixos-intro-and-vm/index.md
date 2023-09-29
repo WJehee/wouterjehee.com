@@ -1,7 +1,7 @@
 +++
 title = "Niks to Nix, part 1 | Introduction and VM setup"
 template = "page.html"
-date = 2023-09-17
+date = 2023-09-28
 [taxonomies]
 series=["Niks to Nix"]
 +++
@@ -19,9 +19,9 @@ This series will cover at least the following topics, but I also have a list of 
 
 ### Goals
 
-- Setup a simple secure server, firewall, ssh keys, etc.
+- Setup a server with sensible defaults
 - Hosting my personal website
-- Radicale for calendar / todos
+- Radicale for calendar / todos (CALDAV)
 - Mail server (stalwart-mail)
 - Additional side projects
 
@@ -32,11 +32,15 @@ This series will cover at least the following topics, but I also have a list of 
 - Firefox sync
 - Rainloop
 
-## Virtual machine setup
+# Virtual machine setup
 
 Since my server is still running and I use the services on a daily basis, my plan is to first test the configuration in a virtual machine and then deploy it once it is done, in order to minimize downtime.
 
 I will be using virt-manager for running my VM's and I'll be using the [nixos minimal iso image](https://nixos.org/download).
+
+Before we get started with setting up the VM, we will setup a bridge network so that our server gets it's own IP address on the network ([Video explanation](https://www.youtube.com/watch?v=DYpaX4BnNlg&t=537s)).
+
+## Installing
 
 1. Open virt-manager and create a new virtual machine.
 2. Select local install media (ISO or CDROM).
@@ -45,5 +49,9 @@ I will be using virt-manager for running my VM's and I'll be using the [nixos mi
 5. Enable storage and create a disk image (again, I leave the defaults).
 6. Check the "Customize configuration before install" checkbox. ![Customize configuration before install](./vm-customize.webp)
 7. Under hypervisor details change the firmware to UEFI to enable it. ![Enable UEFI](./enable-uefi.webp)
-8. Click "begin installation".
+8. Under the appropriate tab, change the network source. ![Network](./network.webp)
+9. Click "begin installation".
+
+That's it!  
+In the next part we start configuring and testing the server.
 

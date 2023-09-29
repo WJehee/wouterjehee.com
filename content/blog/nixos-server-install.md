@@ -1,7 +1,7 @@
 +++
 title = "Niks to Nix, part 2 | Configuring my server using Nix"
 template = "page.html"
-date = 2023-09-20
+date = 2023-09-29
 [taxonomies]
 series=["Niks to Nix"]
 +++
@@ -30,6 +30,7 @@ Here we install some basic programs, such as neovim for editing files and git fo
 ```nix
 environment.systemPackages = with pkgs; [
     git
+    apacheHttpd                             # We need this for htpasswd, which is used by radicale
 ];
 system.stateVersion = "23.05";
 time.timeZone = "Europe/Amsterdam";         # Change to your timezone
@@ -55,6 +56,7 @@ users.users.admin = {
     ];
     openssh.authorizedKeys.keys = [
         "YOUR SSH PUBLIC KEY HERE"
+        "ANOTHER KEY?"
     ];
 };
 security.sudo.enable = false;
@@ -83,14 +85,12 @@ security.sudo = {
 
 Lastly, we set the firewall to allow only the following ports:
 - Port 22 (ssh)
-- Port 80 (http)
-- Port 443 (https)
-- Port 5232 (radicale web service)
+- Port 443 (https), we will redirect all http traffic to https.
 
 ```nix
 networking.firewall = {
     enable = true;
-    allowedTCPPorts = [ 22 80 443 5232 ];
+    allowedTCPPorts = [ 22 80 443 ];
 };
 ```
 
@@ -107,9 +107,6 @@ services.radicale = {
             type = "htpasswd";
             htpasswd_filename = "/etc/radicale/users";
             htpasswd_encryption = "bcrypt";
-        };
-        storage = {
-            filesystem_folder = "/var/lib/radicale/collections";
         };
     };
 };
@@ -128,13 +125,14 @@ services.nginx = {
     recommendedTlsSettings = true;
     virtualHosts = {
         "domain.com" = {
-            addSSL = true;
+            forceSSL = true;
             enableACME = true;
-            root = "/var/www/wouterjehee.com";
+            root = "/var/www/domain.com";
+            serverAliases = [ "radicale.domain.com" ];
         };
        "radicale.domain.com" = {
            forceSSL = true;
-           enableACME = true;
+           useACMEHost = "domain.com"       # reuse the same certificate for this domain
            locations."/" = {
                proxyPass = "http://localhost:5232/";
                extraConfig = ''
@@ -148,31 +146,36 @@ services.nginx = {
 };
 ```
 
-## Installing in a virtual machine
+## DNS
 
+Since we are replacing an old server, we first need to change our DNS records such that they point to our newly configured server.
+This is important because we are trying to setup SSL certificates for our domain name.
+
+First we need to find our public IP, there are several ways to do it, I like to do it like this:
+```sh
+curl -4 ifconfig.co     # IPV4
+curl ifconfig.co        # IPV6
 ```
+Then go to your domain registrar and change your A and AAAA records.
+
+We also need to setup port forwarding on our router in order to access it from the internet.
+So setup a port forwarding rule for ports 80 and 443 using your local IP address (found by using `ip addr`).
+
+# Installing in a virtual machine
+
+```sh
 sudo su
 ```
 
 ## Partioning the disk
-```
-fdisk /dev/vda
-```
 
-- g (gpt disk label)
-- n
-- 1 (partition number [1/128])
-- 2048 first sector
-- +500M last sector (boot sector size)
-- t
-- 1 (EFI System)
-- n
-- 2
-- default (fill up partition)
-- default (fill up partition)
-- w (write)
+```sh
+parted /dev/vda mklabel gpt
+parted /dev/vda mkpart primary fat32 2048s 500M
+parted /dev/vda set 1 esp on
+parted -- /dev/vda mkpart primary ext4 500M -1s
+parted /dev/vda quit
 
-```
 mkfs.fat -F 32 /dev/vda1
 fatlabel /dev/vda1 BOOT
 mkfs.ext4 /dev/vda2 -L ROOT
@@ -183,7 +186,7 @@ mount /dev/disk/by-label/BOOT /mnt/boot
 
 ## Configuration
 Generate the hardware-configuration and get the configuration files
-```
+```sh
 nixos-generate-config --root /mnt
 nix-shell -p git
 git clone https://github.com/wjehee/.dotfiles-nix
@@ -191,19 +194,37 @@ cp /mnt/etc/nixos/hardware-configuration.nix .dotfiles-nix/hosts/HOSTNAME/
 ```
 
 ## Perform the install
-```
+
+```sh
 cd .dotfiles-nix/
 git add .
 nixos-install --flake .#HOSTNAME
 ```
 
-IMPORTANT: Set the password, and set the password for the admin user: `passwd admin`  
-Otherwise we cannot ssh in (since we disable root login)
+Copy the configuration onto the installed version
+```sh
+cd ..
+cp -r .dotfiles-nix /mnt/home/admin
+```
+
+1. Change into the installed version by running: `nixos-enter`
+2. Change ownership of .dotfiles-nix: `chown -R admin:users home/admin/.dotfiles-nix`
+3. Set the password for the admin user, otherwise we cannot login through ssh: `passwd admin`
+4. Create the user file for radicale so we can login: `htpasswd -B -c /etc/radicale-users USERNAME`
+5. Optionally create more calendar users, by running `htpasswd -B /etc/radicale-users USERNAME`
+
+Now we can reboot!  
+It might take some time before the SSL certificates are set up, but once they do everything should work.
+If it doesn't work after a while, just SSH into the server and rebuild it.
+
+Everything seems to work! But our website is looking a bit blank...  
+In the next part we will deploy the server in a VPS with a custom ISO image and setup CI to auto-deploy our website!
 
 # Sources
 
 - [NixOS installation guide](https://nixos.wiki/wiki/NixOS_Installation_Guide)
 - [NixOS and nginx](https://nixos.wiki/wiki/Nginx)
 - [NixOS public key authentication](https://nixos.wiki/wiki/SSH_public_key_authentication)
+- [NixOS security ACME nginx](https://nixos.org/manual/nixos/stable/#module-security-acme-nginx)
 - [Radicale docs](https://radicale.org/v3.html)
 
