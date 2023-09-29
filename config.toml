@@ -1,10 +1,10 @@
 base_url = "https://wouterjehee.com"
 title = "Wouter Jehee"
-compile_sass = true
+
+compile_sass = false
 
 generate_feed = true
 feed_filename = "rss.xml"
-
 build_search_index = false
 
 taxonomies = [
