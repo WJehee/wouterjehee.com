@@ -127,7 +127,7 @@ services.nginx = {
         "domain.com" = {
             forceSSL = true;
             enableACME = true;
-            root = "/var/www/domain.com";
+            root = "/home/admin/domain.com";
             serverAliases = [ "radicale.domain.com" ];
         };
        "radicale.domain.com" = {
@@ -212,8 +212,8 @@ cp -r .dotfiles-nix /mnt/home/admin
 3. Set the password for the admin user, otherwise we cannot login through ssh: `passwd admin`
 4. Create the user file for radicale so we can login: `htpasswd -B -c /etc/radicale-users USERNAME`
 5. Optionally create more calendar users, by running `htpasswd -B /etc/radicale-users USERNAME`
+6. Exit out of the install with `exit` and then `reboot`
 
-Now we can reboot!  
 It might take some time before the SSL certificates are set up, but once they do everything should work.
 If it doesn't work after a while, just SSH into the server and rebuild it.
 
