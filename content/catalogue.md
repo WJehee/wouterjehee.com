@@ -9,7 +9,6 @@ date = 2023-03-21
 - BNR | De Technoloog
 - BNR | Nexus
 - NRC | Onbehaarde Apen
-- Alie Ward | Ologies
 - Tanner Campbell | Practical Stoicism
 
 ## Books
