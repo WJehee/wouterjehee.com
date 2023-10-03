@@ -52,6 +52,6 @@ Before we get started with setting up the VM, we will setup a bridge network so 
 8. Under the appropriate tab, change the network source. ![Network](./network.webp)
 9. Click "begin installation".
 
-That's it!  
+Now the VM is ready to go.  
 In the next part we start configuring and testing the server.
 
