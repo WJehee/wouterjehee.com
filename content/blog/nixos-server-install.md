@@ -209,16 +209,14 @@ cp -r .dotfiles-nix /mnt/home/admin
 
 1. Change into the installed version by running: `nixos-enter`
 2. Change ownership of .dotfiles-nix: `chown -R admin:users home/admin/.dotfiles-nix`
-3. Set the password for the admin user, otherwise we cannot login through ssh: `passwd admin`
-4. Create the user file for radicale so we can login: `htpasswd -B -c /etc/radicale-users USERNAME`
+3. Set the password for the admin user: `passwd admin`
+4. Create the user file for radicale: `htpasswd -B -c /etc/radicale-users USERNAME`
 5. Optionally create more calendar users, by running `htpasswd -B /etc/radicale-users USERNAME`
 6. Exit out of the install with `exit` and then `reboot`
 
-It might take some time before the SSL certificates are set up, but once they do everything should work.
-If it doesn't work after a while, just SSH into the server and rebuild it.
+It might take some time before the SSL certificates are set up, if it still doesn't work after a while, just SSH into the server and rebuild.
 
-Everything seems to work! But our website is looking a bit blank...  
-In the next part we will deploy the server in a VPS with a custom ISO image and setup CI to auto-deploy our website!
+In the next part we will deploy the server in a VPS with a custom ISO image and setup CI to auto-deploy our website.
 
 # Sources
 
