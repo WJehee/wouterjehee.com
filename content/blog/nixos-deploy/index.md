@@ -1,5 +1,5 @@
 +++
-title = "Niks to Nix, part 3 | Deploying"
+title = "Niks to Nix, part 3 | Deploying to a VPS"
 template = "page.html"
 date = 2023-10-02
 [taxonomies]
