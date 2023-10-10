@@ -25,4 +25,5 @@ Google pixel 4a running [Calyx OS](https://calyxos.org/).
 - [Aegis](https://getaegis.app/) for 2 Factor Authentication
 - [Syncthing](https://syncthing.net/) for file synchronization between devices
 - [Feeder](https://gitlab.com/spacecowboy/Feeder) for RSS feeds
+- [Catima](https://catima.app/) for loyalty cards
 
