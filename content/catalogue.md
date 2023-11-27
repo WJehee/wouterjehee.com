@@ -35,4 +35,6 @@ date = 2023-03-21
 - Essentialism | Greg McKeown
 - War of the Worlds | H G Wells
 - The Handmaid's Tale | Margaret Atwood
+- [17776](https://www.sbnation.com/a/17776-football) | Jon Bois
+- 21 Lessons for the 21st century | Yuval Noah Harari
 
