@@ -15,7 +15,7 @@ and setup a github action to deploy our static site when we make a change.
 4. In a new tab, navigate to the [upload ISO page](https://my.vultr.com/iso/add/)
 5. Copy the link to the [latest ISO](https://nixos.org/download) (I use the minimal image), paste it and click upload ![upload ISO](./upload_iso.webp)
 6. Select that ISO you just uploaded ![select ISO](select_iso.webp)
-7. finish the rest of the steps and click "Deploy now"
+7. Finish the rest of the steps and click "Deploy now"
 8. After the server finishes setting up, press the "view console" button to get into a terminal
 
 ## Preparing the installation
@@ -75,7 +75,7 @@ cp -r .dotfiles-nix /mnt/home/admin
 
 ## Setting up CI
 
-Use the following [template github action](https://gist.github.com/notthebee/2e918b62a26f1c1f22dd38baa9b6afc5) but slight adapted:
+Use the following [template github action](https://gist.github.com/notthebee/2e918b62a26f1c1f22dd38baa9b6afc5) with some small changes:
 
 ```
 name: CI
@@ -153,5 +153,4 @@ doas chown admin:users /var/www/SITE_NAME
 ```
 
 Now, whenever you push to the repository containing your website, it will automatically update your website to reflect the changes.
-
 
