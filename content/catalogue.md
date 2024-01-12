@@ -10,6 +10,8 @@ date = 2023-03-21
 - BNR | Nexus
 - NRC | Onbehaarde Apen
 - Tanner Campbell | Practical Stoicism
+- Andrew Huberman | Huberman Lab
+- Ali Abdaal | Deep Dive
 
 ## Books
 
