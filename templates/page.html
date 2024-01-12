@@ -21,17 +21,25 @@
         {{ page.content | safe }}
     </article>
     {% if page.taxonomies.series %}
-        {% set serie_name = page.taxonomies.series[0] %}
-        {% set serie = get_taxonomy_term(kind="series", term=serie_name) %}
-
-        <h4>Other articles in series "{{ serie_name }}":</h4>
-        <ul>
-        {% for other in serie.pages %}
-            {% if page.title != other.title %}
-            <li><a href="{{ other.permalink }}">{{ other.title }}</a></li>
+        <div class="grid">
+            <!-- Taken from: https://github.com/getzola/zola/issues/246 -->
+            {% set series_name = page.taxonomies.series[0] %}
+            {% set series = get_taxonomy_term(kind="series", term=series_name) %}
+            {% for other in series.pages %}
+                {% if page.title == other.title %}
+                    {% set_global series_number = loop.index0 %}
+                {% endif %}
+            {% endfor %}
+            <!-- Since we are sorting in reverse chronological order, this is also flipped -->
+            {% set prev = series_number + 1 %}
+            {% set next = series_number - 1 %}
+            {% if series.pages[prev] %}
+                <a class="post-pagination" href="{{ series.pages[prev].permalink}}">Previous post in this series</a>
             {% endif %}
-        {% endfor %}
-        </ul>
+            {% if series.pages[next] %}
+                <a class="post-pagination" href="{{ series.pages[next].permalink}}">Next post in this series</a>
+            {% endif %}
+        </div>
     {% endif %}
 </main>
 
