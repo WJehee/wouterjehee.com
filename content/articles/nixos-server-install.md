@@ -6,7 +6,7 @@ date = 2023-09-29
 series=["Niks to Nix"]
 +++
 
-In this part we will configure the general settings of the server, the Nginx server for hosting a static site and Radicale.
+In this part we will configure the general settings of the server, the Nginx server for hosting a static site and [Radicale](https://radicale.org/v3.html).
 Both the static site and Radicale will automatically have SSL certificates generated through ACME.
 
 All the configuration is done in the hosts/HOSTNAME/configuration.nix file unless otherwise stated.
@@ -146,6 +146,12 @@ services.nginx = {
 };
 ```
 
+**For more info:**
+
+- [NixOS and nginx](https://nixos.wiki/wiki/Nginx)
+- [NixOS public key authentication](https://nixos.wiki/wiki/SSH_public_key_authentication)
+- [NixOS security ACME nginx](https://nixos.org/manual/nixos/stable/#module-security-acme-nginx)
+
 ## DNS
 
 Since we are replacing an old server, we first need to change our DNS records such that they point to our newly configured server.
@@ -215,14 +221,4 @@ cp -r .dotfiles-nix /mnt/home/admin
 6. Exit out of the install with `exit` and then `reboot`
 
 It might take some time before the SSL certificates are set up, if it still doesn't work after a while, just SSH into the server and rebuild.
-
-In the next part we will deploy the server in a VPS with a custom ISO image and setup CI to auto-deploy our website.
-
-# Sources
-
-- [NixOS installation guide](https://nixos.wiki/wiki/NixOS_Installation_Guide)
-- [NixOS and nginx](https://nixos.wiki/wiki/Nginx)
-- [NixOS public key authentication](https://nixos.wiki/wiki/SSH_public_key_authentication)
-- [NixOS security ACME nginx](https://nixos.org/manual/nixos/stable/#module-security-acme-nginx)
-- [Radicale docs](https://radicale.org/v3.html)
 
