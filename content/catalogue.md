@@ -5,13 +5,13 @@ date = 2023-03-21
 
 ## Podcasts
 
-- BNR | Digitaal
-- BNR | De Technoloog
-- BNR | Nexus
-- NRC | Onbehaarde Apen
-- Tanner Campbell | Practical Stoicism
-- Andrew Huberman | Huberman Lab
-- Ali Abdaal | Deep Dive
+- Digitaal | BNR
+- De Technoloog | BNR
+- Nexus | BNR
+- Onbehaarde Apen | NRC
+- Practical Stoicism | Tanner Campbell
+- Huberman Lab | Andrew Huberman 
+- Deep Dive | Ali Abdaal 
 
 ## Books
 
@@ -39,4 +39,8 @@ date = 2023-03-21
 - The Handmaid's Tale | Margaret Atwood
 - [17776](https://www.sbnation.com/a/17776-football) | Jon Bois
 - 21 Lessons for the 21st century | Yuval Noah Harari
+
+### 2024
+
+- How to win friends and influence people | Dale Carnegie
 
