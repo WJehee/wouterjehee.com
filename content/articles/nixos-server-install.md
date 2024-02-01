@@ -1,5 +1,5 @@
 +++
-title = "Niks to Nix, part 2 | Configuring my server using Nix"
+title = "Niks to Nix, part 1 | Configuring my server using Nix"
 template = "page.html"
 date = 2023-09-29
 [taxonomies]
@@ -134,9 +134,10 @@ services.nginx = {
            forceSSL = true;
            useACMEHost = "domain.com"       # reuse the same certificate for this domain
            locations."/" = {
+               # setup a reverse proxy for radicale
                proxyPass = "http://localhost:5232/";
                extraConfig = ''
-                   proxy_set_header X-Script-Name /radicale;
+                   proxy_set_header X-Script-Name /;
                    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
                    proxy_pass_header Authorization;
                '';

@@ -1,5 +1,5 @@
 +++
-title = "Niks to Nix, part 1 | Introduction and VM setup"
+title = "Niks to Nix, part 0 | Introduction and VM setup"
 template = "page.html"
 date = 2023-09-28
 [taxonomies]
@@ -28,7 +28,6 @@ This series will cover at least the following topics, but I also have a list of 
 - Git server
 - Matrix server and bridges
 - Firefox sync
-- Rainloop
 
 # Virtual machine setup
 
