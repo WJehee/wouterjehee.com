@@ -17,6 +17,10 @@ article a {
     list-style: none;
 }
 
+.icon {
+    text-decoration: none;
+}
+
 /* Posts */
 
 .post {
