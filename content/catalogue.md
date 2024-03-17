@@ -43,4 +43,5 @@ date = 2023-03-21
 ### 2024
 
 - How to win friends and influence people | Dale Carnegie
+- Range | David Epstein
 
