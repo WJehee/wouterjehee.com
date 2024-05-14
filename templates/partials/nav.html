@@ -1,6 +1,8 @@
 <nav class="container-fluid">
     <ul class="hidden-mobile">
         <li><a href="/"><strong>{{ config.title }}</strong></a></li>
+
+        {% set placement = "bottom" %}
         <li>{% include "partials/github.html" %}</li>
         <li>{% include "partials/email.html" %}</li>
         <li>{% include "partials/keyoxide.html" %}</li>
