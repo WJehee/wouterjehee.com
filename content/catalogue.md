@@ -44,4 +44,5 @@ date = 2023-03-21
 
 - How to win friends and influence people | Dale Carnegie
 - Range | David Epstein
+- Brave new world | Aldous Huxley
 

@@ -9,7 +9,7 @@ My old dotfiles for Arch linux can be found [here](https://github.com/WJehee/.do
 - Editor: [Neovim](https://neovim.io/)
 - Window manager: [Hyprland](https://hyprland.org/)
 - Status bar: [Waybar](https://github.com/Alexays/Waybar)
-- Launcher: [Rofi](https://github.com/davatorium/rofi)
+- Launcher: [Wofi](https://hg.sr.ht/~scoopta/wofi)
 - Shell: [zsh](https://www.zsh.org/)
 - Terminal emulator: [Alacritty](https://github.com/alacritty/alacritty)
 
@@ -17,8 +17,7 @@ My old dotfiles for Arch linux can be found [here](https://github.com/WJehee/.do
 
 Google pixel 4a running [Calyx OS](https://calyxos.org/).
 
-- [K-9 Mail](https://k9mail.app/) and [Tutanota](https://tutanota.com/) for email
-- [Simplelogin](https://simplelogin.io/) for email aliasing
+- [K-9 Mail](https://k9mail.app/) for email (provider is [Startmail](https://www.startmail.com/), also provides aliasing)
 - [Obsidian](https://obsidian.md) for note taking
 - [DavX5](https://www.davx5.com/) for calendar and tasks synchronisation
 - [KeepassXC](https://keepassxc.org/) for password management

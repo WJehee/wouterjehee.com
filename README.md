@@ -1,4 +1,6 @@
-# Wouter's Homepage
+# Wouterjehee.com
+
+My personal website
 
 - [Zola](https://www.getzola.org)
 - [Pico CSS](https://v2.picocss.com/docs)
