@@ -4,7 +4,7 @@ title = "Wouter Jehee"
 compile_sass = false
 
 generate_feeds = true
-feed_filenames = "rss.xml"
+feed_filenames = [ "rss.xml" ]
 
 build_search_index = false
 
