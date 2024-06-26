@@ -12,6 +12,7 @@ date = 2023-03-21
 - Practical Stoicism | Tanner Campbell
 - Huberman Lab | Andrew Huberman 
 - Deep Dive | Ali Abdaal 
+- Darknet Diaries | Jack Rhysider
 
 ## Books
 
@@ -45,4 +46,6 @@ date = 2023-03-21
 - How to win friends and influence people | Dale Carnegie
 - Range | David Epstein
 - Brave new world | Aldous Huxley
+- There's a war going on but no one can see it | Huib Modderkolk
+- We are Bellingcat | Eliot Higgins
 
