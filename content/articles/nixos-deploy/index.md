@@ -20,7 +20,7 @@ and setup a github action to deploy our static site when we make a change.
 
 ## Preparing the installation
 
-This section is roughly the same as the VM setup in the previous part with some small tweaks regarding the [specifics of Vultr](https://www.vultr.com/docs/how-to-install-nixos-on-a-vultr-vps).
+This section is roughly the same as the VM setup in the previous part with some small tweaks regarding the specifics of Vultr.
 
 Become root:
 ```sh
