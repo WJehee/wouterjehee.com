@@ -8,14 +8,13 @@ feed_filenames = [ "rss.xml" ]
 
 build_search_index = false
 
-external_links_target_blank = true
-
 taxonomies = [
     {name = "series", feed = true, paginate_by = 10},
 ]
 
 [markdown]
 highlight_code = true
+external_links_target_blank = true
 
 [extra]
 icon_size = 42
