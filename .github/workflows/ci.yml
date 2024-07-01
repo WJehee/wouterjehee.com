@@ -13,8 +13,10 @@ jobs:
       uses: webfactory/ssh-agent@v0.4.1
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
     - uses: cachix/install-nix-action@v27
     - run: nix build --print-build-logs
+
     - name: Scan the host key
       run: mkdir -p ~/.ssh/ && ssh-keyscan -H $DEPLOY_SERVER >> ~/.ssh/known_hosts
       env:
@@ -22,7 +24,7 @@ jobs:
 
     - name: Deploy the website
       run: >-
-        rsync -avx --delete --exclude '.ssh' public/ $DEPLOY_USERNAME@$DEPLOY_SERVER:/var/www/wouterjehee.com
+        rsync -avx --delete --exclude '.ssh' result/ $DEPLOY_USERNAME@$DEPLOY_SERVER:/var/www/wouterjehee.com
       env:
         DEPLOY_SERVER: ${{ secrets.DEPLOY_SERVER }}
         DEPLOY_USERNAME: ${{ secrets.DEPLOY_USERNAME }}
