@@ -1,35 +1,29 @@
-name: CI
-run-name: Zola blog deployment
+name: "Wouterjehee.com"
+run-name: Zola blog deploy
 on:
+  pull_request:
   push:
-
 jobs:
   build:
     runs-on: ubuntu-latest
     environment: deploy
     steps:
-      - name: Checkout the current branch
-        uses: actions/checkout@v3
+    - uses: actions/checkout@v4
+    - name: Initialize the ssh-agent
+      uses: webfactory/ssh-agent@v0.4.1
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+    - uses: cachix/install-nix-action@v27
+    - run: nix build --print-build-logs
+    - name: Scan the host key
+      run: mkdir -p ~/.ssh/ && ssh-keyscan -H $DEPLOY_SERVER >> ~/.ssh/known_hosts
+      env:
+        DEPLOY_SERVER: ${{ secrets.DEPLOY_SERVER }}
 
-      - name: Initialize the ssh-agent
-        uses: webfactory/ssh-agent@v0.4.1
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+    - name: Deploy the website
+      run: >-
+        rsync -avx --delete --exclude '.ssh' public/ $DEPLOY_USERNAME@$DEPLOY_SERVER:/var/www/wouterjehee.com
+      env:
+        DEPLOY_SERVER: ${{ secrets.DEPLOY_SERVER }}
+        DEPLOY_USERNAME: ${{ secrets.DEPLOY_USERNAME }}
 
-      - name: Install Zola
-        run: sudo snap install zola --edge
-
-      - name: Build the website
-        run: zola build
-
-      - name: Scan the host key
-        run: mkdir -p ~/.ssh/ && ssh-keyscan -H $DEPLOY_SERVER >> ~/.ssh/known_hosts
-        env:
-          DEPLOY_SERVER: ${{ secrets.DEPLOY_SERVER }}
-
-      - name: Deploy the website
-        run: >-
-          rsync -avx --delete --exclude '.ssh' public/ $DEPLOY_USERNAME@$DEPLOY_SERVER:/var/www/wouterjehee.com
-        env:
-          DEPLOY_SERVER: ${{ secrets.DEPLOY_SERVER }}
-          DEPLOY_USERNAME: ${{ secrets.DEPLOY_USERNAME }}

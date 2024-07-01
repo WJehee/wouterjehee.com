@@ -47,5 +47,6 @@ date = 2023-03-21
 - Range | David Epstein
 - Brave new world | Aldous Huxley
 - There's a war going on but no one can see it | Huib Modderkolk
+- The Psychology of Money | Morgan Housel
 - We are Bellingcat | Eliot Higgins
 
