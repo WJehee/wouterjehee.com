@@ -11,7 +11,7 @@ Not all sequences end at 1 however, these numbers are categorized as follows:
 
 - Perfect numbers: numbers where the sum of it's proper divisors is itself.
 - Amicable numbers: numbers that keep going back and forth, e.g. 220 and 284.
-- Sociable numbers: sequences that go in a cycle longer that 2 numbers.
+- Sociable numbers: sequences that go in a cycle longer than 2 numbers.
 - Aspiring numbers: these numbers are not perfect themselves but end at a perfect number instead of 1.
 
 Lastly, there are also divergent numbers, which are numbers of which the full Aliquot sequence has not yet been found. The Lehmer five are the most well known as they are the first 5 numbers for which this is the case. The Lehmer five are: 276, 552, 564, 660, 966.
@@ -52,5 +52,5 @@ console.log(JSON.stringify(result));
 
 This makes the graph load instantly and still maintains the positions!
 The python code used to generate the graph can be found [in this gist](https://gist.github.com/WJehee/4d708b111190554fa88e55d517050b20)
-(you need to have [networkx](https://networkx.org/) and [pyvis](https://pyvis.readthedocs.io/en/latest/index.html) installed.
+(you need to have [networkx](https://networkx.org/) and [pyvis](https://pyvis.readthedocs.io/en/latest/index.html) installed).
 
