@@ -10,7 +10,7 @@ My old dotfiles for Arch linux can be found [here](https://github.com/WJehee/.do
 - Window manager: [Hyprland](https://hyprland.org/)
 - Status bar: [Waybar](https://github.com/Alexays/Waybar)
 - Launcher: [Wofi](https://hg.sr.ht/~scoopta/wofi)
-- Shell: [zsh](https://www.zsh.org/)
+- Shell: [zsh](https://www.zsh.org/) / [nushell](https://www.nushell.sh/)
 - Terminal emulator: [Alacritty](https://github.com/alacritty/alacritty)
 
 ### Phone
@@ -23,6 +23,5 @@ Google pixel 4a running [Calyx OS](https://calyxos.org/).
 - [KeepassXC](https://keepassxc.org/) for password management
 - [Aegis](https://getaegis.app/) for 2 Factor Authentication
 - [Syncthing](https://syncthing.net/) for file synchronization between devices
-- [Feeder](https://gitlab.com/spacecowboy/Feeder) for RSS feeds
 - [Catima](https://catima.app/) for loyalty cards
 
